@@ -14,14 +14,9 @@ namespace BruceLibrary
     public class ProgrameUtility
     {
         #region 构造函数
-        private readonly static ProgrameUtility _instance = new ProgrameUtility();
+        public readonly static ProgrameUtility Current = new ProgrameUtility();
         private ProgrameUtility()
-        { }
-
-        public ProgrameUtility Instance
-        {
-            get { return _instance; }
-        }        
+        { }   
         #endregion
 
         #region 公共方法
@@ -34,16 +29,13 @@ namespace BruceLibrary
         ///   "专用部件号：" + fvi.FilePrivatePart,
         /// </summary>
         /// <param name="FilePath">程序地址，默认值为当前程序地址</param>
-        public static FileVersionInfo GetVersionInfo(string FilePath = "")
+        public FileVersionInfo GetVersionInfo(string FilePath = "")
         {
             //获取文件地址
             if (FilePath == "")
                 FilePath = Application.ExecutablePath;
-
             //获取文件版本信息
-            System.Diagnostics.FileVersionInfo fvi =
-                    System.Diagnostics.FileVersionInfo.GetVersionInfo(FilePath);
-
+            FileVersionInfo fvi = FileVersionInfo.GetVersionInfo(FilePath);
             if (fvi != null)
                 return fvi;
             else
@@ -58,7 +50,7 @@ namespace BruceLibrary
         /// <param name="path">程序路径</param>
         /// <returns>true: 设置成功 false:设置失败</returns>
         /// <example>SetProgrameRunWhenPCStart(true,"App","D:\\App.exe")</example>
-        public static bool SetProgrameRunWhenPCStart(bool started, string exeName, string path)
+        public bool SetProgrameRunWhenPCStart(bool started, string exeName, string path)
         {
             RegistryKey key = Registry.LocalMachine.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);//打开注册表子项 
             if (key == null) key = Registry.LocalMachine.CreateSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run");
@@ -95,7 +87,7 @@ namespace BruceLibrary
         /// </summary>
         /// <param name="strSystemName">程序名称如：NotePad</param>
         /// <example>GlobalMutex("NotePad")</example>
-        public static void GlobalMutex(string strSystemName)
+        public void GlobalMutex(string strSystemName)
         {
             // 是否第一次创建mutex
             bool newMutexCreated = false;
@@ -107,7 +99,7 @@ namespace BruceLibrary
             catch (Exception ex)
             {
                 Console.Write(ex.Message);
-                System.Threading.Thread.Sleep(1000);
+                Thread.Sleep(1000);
                 Environment.Exit(1);
             }
 
@@ -119,7 +111,7 @@ namespace BruceLibrary
             else
             {
                 //MessageUtil.ShowTips("另一个窗口已在运行，不能重复运行。");
-                System.Threading.Thread.Sleep(1000);
+                Thread.Sleep(1000);
                 Environment.Exit(1);//退出程序
             }
         } 
