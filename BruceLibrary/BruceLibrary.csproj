@@ -30,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Management" />
@@ -42,16 +46,32 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bruce.cs" />
+    <Compile Include="Converters\Chinese.cs" />
+    <Compile Include="Converters\ConverterFade.cs" />
+    <Compile Include="Converters\Csv.cs" />
+    <Compile Include="Converters\RMB.cs" />
+    <Compile Include="Converters\Json.cs" />
+    <Compile Include="DEncrypt\DEncryptFade.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tools\AppConfigHelper.cs" />
+    <Compile Include="Tools\DateTimeHelper.cs" />
+    <Compile Include="Tools\Log4NetHelper.cs" />
     <Compile Include="Utility\ProgrameUtility.cs" />
     <Compile Include="Utility\HardwareUtility.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Cache\" />
     <Folder Include="Context\" />
     <Folder Include="Core\" />
-    <Folder Include="Lib\" />
-    <Folder Include="ThirdParty\" />
-    <Folder Include="Tools\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Lib\AspNetPager.dll" />
+    <Content Include="Lib\LitJSON.dll" />
+    <Content Include="Lib\log4net.dll" />
+    <Content Include="Lib\log4net.xml" />
+    <Content Include="Lib\MySql.Data.dll" />
+    <Content Include="Lib\Newtonsoft.Json.dll" />
+    <Content Include="Lib\System.Data.SQLite.DLL" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

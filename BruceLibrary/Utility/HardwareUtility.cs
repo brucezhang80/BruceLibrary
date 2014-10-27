@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*****************************************************************
+ * 创建人：布鲁斯张
+ * 时  间：2014-10-17
+ * 描  述：获取硬件相关信息工具类
+ *        获取指定设备相关信息
+ *****************************************************************/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -70,6 +76,16 @@ namespace BruceLibrary
             Win32_NetworkProtocol, // 已安装的网络协议
             Win32_PnPEntity,//all device
         }
+
+        //默认提供信息，其他信息可通过方法获取
+        public string CpuID;
+        public string MacAddress;
+        public string DiskID;
+        public string IpAddress;
+        public string LoginUserName;
+        public string ComputerName;
+        public string SystemType;
+        public string TotalPhysicalMemory; //单位：M
         #endregion
 
         #region 构造函数

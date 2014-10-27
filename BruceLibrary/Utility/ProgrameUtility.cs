@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*****************************************************************
+ * 创建人：布鲁斯张
+ * 时  间：2014-10-17
+ * 描  述：应用程序工具类
+ *        只允许启动一个程序实例
+ *        设置程序开机启动 
+ *****************************************************************/
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Windows.Forms;
