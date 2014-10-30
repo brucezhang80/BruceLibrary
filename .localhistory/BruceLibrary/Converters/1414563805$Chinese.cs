@@ -169,7 +169,7 @@ namespace BruceLibrary.Converters
         /// </summary>
         /// <param name="strChinese">汉字</param>
         /// <returns>首字母</returns>
-        public string GetChineseStringFirstPinyinLetter(string strChinese)
+        public string GetChineseStringFirstLetter(string strChinese)
         {
             int i = 0;
             ushort key = 0;

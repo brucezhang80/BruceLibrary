@@ -1,0 +1,7 @@
+D:\工作文件\05.技术研究\BruceLibrary\BruceLibrary\BruceLibrary\bin\Debug\BruceLibrary.dll
+D:\工作文件\05.技术研究\BruceLibrary\BruceLibrary\BruceLibrary\bin\Debug\BruceLibrary.pdb
+D:\工作文件\05.技术研究\BruceLibrary\BruceLibrary\BruceLibrary\bin\Debug\log4net.dll
+D:\工作文件\05.技术研究\BruceLibrary\BruceLibrary\BruceLibrary\bin\Debug\log4net.xml
+D:\工作文件\05.技术研究\BruceLibrary\BruceLibrary\BruceLibrary\obj\Debug\BruceLibrary.csprojResolveAssemblyReference.cache
+D:\工作文件\05.技术研究\BruceLibrary\BruceLibrary\BruceLibrary\obj\Debug\BruceLibrary.dll
+D:\工作文件\05.技术研究\BruceLibrary\BruceLibrary\BruceLibrary\obj\Debug\BruceLibrary.pdb
